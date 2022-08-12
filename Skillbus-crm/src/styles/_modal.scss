@@ -1,0 +1,352 @@
+@import "_variables.scss";
+@import "_mixin.scss";
+
+.modal {
+  &__container {
+    padding-bottom: 100px;
+  }
+
+  &__add {
+    &-btn {
+      display: flex;
+      max-width: fit-content;
+      margin: 0 auto;
+      @include fontSemi;
+      font-size: 14px;
+      line-height: 16px;
+      color: $accentColor;
+      border: 1px solid $accentColor;
+      padding: 12px 26px;
+      & svg {
+        margin-right: 6px;
+      }
+    }
+  }
+
+  &__form {
+    &-overlay {
+      position: fixed;
+      z-index: 100;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #33333399;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      width: 100%;
+      overflow: auto;
+    }
+
+    &-block {
+      position: relative;
+      background-color: #fff;
+      width: 450px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 0 25px;
+    }
+
+    &--change {
+    }
+
+    &-close {
+      position: absolute;
+      top: 24px;
+      right: 20px;
+    }
+
+    &-form {
+    }
+
+    &-heading {
+      padding-left: 30px;
+      @include fontBold;
+      font-size: 18px;
+      line-height: 25px;
+      color: $black;
+      margin-bottom: 15px;
+    }
+
+    &-id {
+      @include fontReg;
+      font-size: 12px;
+      line-height: 16px;
+      color: $txtGrey;
+      display: inline-block;
+      margin-left: 8px;
+    }
+
+    &-row {
+      position: relative;
+      padding: 0 30px;
+      margin-bottom: 15px;
+    }
+
+    &-label {
+      position: absolute;
+      top: 0;
+      left: 30px;
+      @include fontSemi;
+      font-size: 14px;
+      line-height: 20px;
+      color: $txtGrey;
+      transform-origin: top left;
+
+      & span {
+        color: $accentColor;
+      }
+    }
+
+    &-input {
+      display: block;
+      width: 100%;
+      padding: 17px 0 4px;
+      border-bottom: 1px solid $grey;
+      @include fontSemi;
+      font-size: 14px;
+      line-height: 20px;
+      color: $black;
+    }
+
+    &-contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px 30px;
+      margin: 25px 0;
+      background-color: rgba(200, 197, 209, 0.2);
+
+      &--open {
+        padding: 25px 30px;
+      }
+
+      &-list {
+        width: 100%;
+        // margin-top: 17px;
+      }
+
+      &-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+        &:last-child {
+          margin-bottom: 25px;
+        }
+        &:last-child {
+          margin-bottom: 25px;
+        }
+        &:first-child {
+          margin-top: 17px;
+        }
+      }
+
+      &-label {
+        flex: 1 1 auto;
+        padding: 8px 12px;
+        background-color: transparent;
+        border: 1px solid $txtGrey;
+        border-width: 1px 1px 1px 0;
+      }
+
+      &-input {
+        @include fontSemi;
+        font-size: 14px;
+        line-height: 20px;
+        color: $black;
+      }
+
+      &-delete {
+        padding: 10px 8px;
+        background-color: #e7e5eb;
+        border: 1px solid $txtGrey;
+        border-width: 1px 1px 1px 0;
+
+        &-svg {
+          fill: $txtGrey;
+          transform: rotate(45deg);
+        }
+      }
+
+      &-btn {
+        @include fontSemi;
+        font-size: 14px;
+        line-height: 19px;
+        display: flex;
+        align-items: center;
+        color: $black;
+
+        & svg {
+          margin-right: 4px;
+          fill: $accentColor;
+        }
+      }
+    }
+
+    &-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-submit {
+      margin-bottom: 5px;
+      padding: 12px 35px;
+      background-color: $accentColor;
+      color: $white;
+      max-width: fit-content;
+      &--save {
+      }
+
+      &--delete {
+      }
+    }
+
+    &-delete {
+      @include fontReg;
+      font-size: 12px;
+      line-height: 17px;
+      color: $black;
+    }
+
+    &--add {
+    }
+
+    &-cancel {
+      @include fontReg;
+      font-size: 12px;
+      line-height: 17px;
+      color: $black;
+    }
+
+    &--delete {
+      align-items: center;
+      min-height: 215px;
+    }
+
+    &--delete &-heading {
+      padding: 0;
+      margin-bottom: 11px;
+    }
+
+    &-description {
+      max-width: 275px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+  }
+}
+
+.js-choice {
+}
+
+.choices[data-type*="select-one"] .choices__inner {
+  padding: 10px 12px;
+}
+
+.choices {
+  width: 123px;
+  margin: 0;
+}
+
+.choices__inner {
+  min-height: 30px;
+  vertical-align: middle;
+  border: 1px solid $txtGrey;
+  border-radius: 0;
+  background-color: #e7e5eb;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.choices__list--dropdown .choices__item,
+.choices__list[aria-expanded] .choices__item {
+  font-size: 12px;
+}
+
+.choices__list--dropdown .choices__item--selectable.is-highlighted,
+.choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: unset;
+}
+
+.choices__list--dropdown .choices__item--selectable,
+.choices__list[aria-expanded] .choices__item--selectable {
+  padding-right: 0;
+}
+
+.choices[data-type*="select-one"]:after {
+  content: "";
+  position: absolute;
+  margin: 0;
+  width: 7px;
+  height: 7px;
+  right: 12px;
+  top: 12px;
+  border-width: 0 1px 1px 0;
+  border-style: solid;
+  border-color: $accentColor;
+  transform: rotate(45deg);
+}
+
+.choices[data-type*="select-one"].is-open:after {
+  margin: 5px 0 0 0;
+  border-color: $accentColor;
+  transform: rotate(225deg);
+}
+
+.choices[data-type*="select-one"] .choices__input {
+  display: none;
+}
+
+.choices__list--dropdown,
+.choices__list[aria-expanded] {
+  border: 1px solid $grey;
+  border-radius: 0;
+  background-color: rgb(244, 243, 246);
+}
+
+.choices__item {
+  padding: 0;
+  @include fontReg;
+  font-size: 12px;
+  line-height: 16px;
+  opacity: 1;
+}
+
+.choices__list--single {
+  padding: 0;
+  color: $black;
+}
+
+.choices__list--dropdown .choices__item {
+  padding: 0 12px;
+  @include fontReg;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.choices__list--dropdown .is-selected {
+  display: none;
+}
+
+.error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+
+  &__text {
+    text-align: center;
+    color: $red;
+  }
+}
+
+.invalid-value {
+  border-color: $red;
+}

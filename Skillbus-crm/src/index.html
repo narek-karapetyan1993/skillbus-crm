@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Skillbus</title>
+
+  <link rel="shortcut icon" href="./resources/favicon.png" type="image/png">
+
+  <link rel="preload" href="fonts/open-sans-v28-latin_cyrillic-600.woff2" as="font">
+  <link rel="preload" href="fonts/open-sans-v28-latin_cyrillic-700.woff2" as="font">
+  <link rel="preload" href="fonts/open-sans-v28-latin_cyrillic-regular.woff2" as="font">
+
+  <link rel="stylesheet" href="./resources/normalize.css">
+  <link rel="stylesheet" href="./resources/choices.min.css">
+  <link rel="stylesheet" href="./styles/style.css">
+
+  <script defer src="./resources/gsap.js"></script>
+  <script defer src="./resources/choices.min.js"></script>
+  <script defer src="./resources/popper.js"></script>
+  <script defer src="./resources/tippy.js"></script>
+  <script defer src="./js/app.js"></script>
+
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo">skb.</a>
+      <form action="#" class="header__form" method="get">
+        <label class="header__form-label">
+          <input type="search" class="header__form-search" id="headerInput" placeholder="Введите запрос">
+        </label>
+      </form>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="clients">
+      <div class="container clients__container">
+        <h2 class="clients__heading visually-hidden">Клиенты</h2>
+
+        <table class="clients__table">
+
+          <caption class="clients__table-heading">
+            Клиенты
+          </caption>
+
+          <thead class="clients__table-head" id="tableHead">
+
+
+          </thead>
+
+          <tbody class="clients__table-body" id="tableBody">
+
+
+          </tbody>
+
+        </table>
+
+      </div>
+    </section>
+
+
+    <section class="modal">
+      <div class="container modal__container">
+        <h2 class="visually-hidden">добавить клиента</h2>
+
+
+      </div>
+    </section>
+
+
+  </main>
+
+</body>
+
+</html>
